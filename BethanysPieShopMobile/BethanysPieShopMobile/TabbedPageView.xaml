@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.TabbedPageView"
+            xmlns:helpers="clr-namespace:BethanysPieShopMobile.Helpers">
+  <!--Pages can be added as references or inline-->
+    
+    <helpers:HomePageView></helpers:HomePageView>
+    <helpers:PieOverviewView></helpers:PieOverviewView>
+    <helpers:BasketView></helpers:BasketView>
+    <helpers:ContactUsView></helpers:ContactUsView>
+</TabbedPage>

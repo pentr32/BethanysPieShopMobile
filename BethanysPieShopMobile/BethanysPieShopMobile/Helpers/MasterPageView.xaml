@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:bethanysPieShopMobile="clr-namespace:BethanysPieShopMobile;assembly=BethanysPieShopMobile"
+             xmlns:helpers="clr-namespace:BethanysPieShopMobile.Helpers;assembly=BethanysPieShopMobile"
+             x:Class="BethanysPieShopMobile.Helpers.MasterPageView"
+             Title="Navigation">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="NavigationListView" x:FieldModifier="public">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type bethanysPieShopMobile:MasterNavigationItem}">
+                        <bethanysPieShopMobile:MasterNavigationItem Title="Home" Icon="home.png" Target="{x:Type helpers:HomePageView}" />
+                        <bethanysPieShopMobile:MasterNavigationItem Title="Basket" Icon="basket.png" Target="{x:Type helpers:BasketView}" />
+                        <bethanysPieShopMobile:MasterNavigationItem Title="Contact" Icon="contact.png" Target="{x:Type helpers:ContactUsView}" />
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Icon}" />
+                                <Label Grid.Column="1" Text="{Binding Title}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

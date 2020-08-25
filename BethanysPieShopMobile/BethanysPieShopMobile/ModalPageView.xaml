@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.ModalPageView">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Image Source="applepiesmall.jpg"
+                WidthRequest="200"
+                HeightRequest="200"
+                Margin="10" />
+            <Button x:Name="btnView" Text="View larger image" Clicked="btnView_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

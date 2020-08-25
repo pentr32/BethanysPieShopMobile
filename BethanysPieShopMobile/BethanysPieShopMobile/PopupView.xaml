@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.PopupView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnSimpleAlert" Text="Alert Simple" Clicked="btnSimpleAlert_Clicked" Margin="5"/>
+            <Button x:Name="AlertYesNo" Text="Alert Yes/No" Clicked="AlertYesNo_Clicked"  Margin="5"/>
+            <Button x:Name="ActionSheetSimple" Text="ActionSheet Simple" Clicked="ActionSheetSimple_Clicked"  Margin="5"/>
+            <Button x:Name="ActionSheetCancelDelete" Text="ActionSheet Cancel/Delete" Clicked="ActionSheetCancelDelete_Clicked"  Margin="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

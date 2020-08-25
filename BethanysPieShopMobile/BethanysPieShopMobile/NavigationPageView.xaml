@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.NavigationPageView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Home page" Margin="5" x:Name="HomePageButton" Clicked="HomePageButton_Clicked"></Button>
+            <Button Text="Pie overview" Margin="5" x:Name="PieOverviewButton" Clicked="PieOverviewButton_OnClicked"></Button>
+            <Button Text="Basket" Margin="5" x:Name="BasketButton" Clicked="BasketButton_OnClicked"></Button>
+            <Button Text="Contact us" Margin="5" x:Name="ContactUsButton" Clicked="ContactUsButton_OnClicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
