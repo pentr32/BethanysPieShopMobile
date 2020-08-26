@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.PieShopViews.Settingsview"
+             BackgroundImage="patternwide.png">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".4*"></ColumnDefinition>
+                <ColumnDefinition Width=".6*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Settings" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+            <Picker x:Name="LanguagePickerFromCode" Grid.Row="1" Grid.ColumnSpan="2" Title="Select your language for this app" SelectedIndexChanged="LanguagePickerFromCode_OnSelectedIndexChanged"></Picker>
+
+
+            <Label x:Name="SelectedLanguageLabel" Grid.Row="2"></Label>
+            <Label Text="Preferred monthly budget for pies" Grid.Row="3"></Label>
+            <Slider x:Name="PieBudgetSlider" Minimum="0" Value="100" Maximum="1000" Grid.Row="3" Grid.Column="1" ValueChanged="PieBudgetSlider_OnValueChanged"></Slider>
+            <Label x:Name="PieBudgetLabel" Grid.Row="4"></Label>
+
+            <Label Text="Maximum pies you can order" Grid.Row="5"></Label>
+            <Stepper Maximum="10" x:Name="MaxPieStepper" Grid.Row="5" Grid.Column="1" HorizontalOptions="Center" ValueChanged="MaxPieStepper_OnValueChanged" />
+            <Label x:Name="MaxPieLabel" Grid.Row="6"></Label>
+
+            <Button x:Name="SaveSettingsButton" Clicked="SaveSettingsButton_OnClicked" Text="Save settings" HorizontalOptions="Center" VerticalOptions="Start" BackgroundColor="#22cfa7" Grid.Row="7" Grid.ColumnSpan="2" TextColor="White"></Button>
+
+            <ActivityIndicator x:Name="SavingActivityIndicator" Grid.Row="8" Grid.ColumnSpan="2" Color="#22cfa7" IsRunning="False"></ActivityIndicator>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
