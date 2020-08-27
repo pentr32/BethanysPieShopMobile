@@ -1,8 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:BethanysPieShopMobile="clr-namespace:BethanysPieShopMobile"
              x:Class="BethanysPieShopMobile.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <BethanysPieShopMobile:ColorDictionary />
+            </ResourceDictionary.MergedDictionaries>
 
+            <Style x:Key="GreenButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BethanysGreenColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="RegularButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                <Setter Property="VerticalOptions" Value="Start"></Setter>
+                <Setter Property="BackgroundColor" Value="#22cfa7"></Setter>
+                <Setter Property="TextColor" Value="White"></Setter>
+            </Style>
+
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                
+            </Style>
+
+            <Style x:Key="LogoImageStyle" TargetType="Image">
+                
+            </Style>
+
+            <Style x:Key="SmallLogoImageStyle " TargetType="Image">
+                
+            </Style>
+
+            <Style x:Key="EditorStyle" TargetType="Editor">
+                
+            </Style>
+
+            <Style x:Key="LoginEntry" TargetType="Entry">
+                
+            </Style>
+            
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

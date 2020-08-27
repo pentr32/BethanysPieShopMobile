@@ -16,5 +16,11 @@ namespace BethanysPieShopMobile.PieShopViews
         {
             InitializeComponent();
         }
+
+        private async void LoginButton_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.InsertPageBefore(new MainView(), this);     // Brugeren er authentikeret
+            await Navigation.PopAsync();
+        }
     }
 }

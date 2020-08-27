@@ -3,6 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BethanysPieShopMobile.PieShopViews.LoginView"
              BackgroundImageSource="patternwide.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RegularButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#22cfa7" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -55,7 +66,7 @@
 
             <!--Row[6]-->
             <Label Grid.Row="6" Grid.Column="0"></Label>
-            <Button Grid.Row="6" x:Name="LoginButton" Grid.Column="1" BackgroundColor="#22cfa7" TextColor="White" Text="LOGIN" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" ></Button>
+            <Button Grid.Row="6" Style="{StaticResource GreenButtonStyle}" x:Name="LoginButton" Clicked="LoginButton_OnClicked" Grid.Column="1" Text="LOGIN"></Button>
             <!--Row[6]-->
 
         </Grid>

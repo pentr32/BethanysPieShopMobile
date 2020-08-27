@@ -28,7 +28,7 @@
                 <Label Text="Should we contact you?"></Label>
                 <Switch x:Name="ContactMeSwitch"></Switch>
             </StackLayout>
-            <Button Text="Send" HorizontalOptions="Center" VerticalOptions="Start" BackgroundColor="#22cfa7" x:Name="SendMessageButton" Clicked="SendMessageButton_Clicked" TextColor="White"></Button>
+            <Button Text="Send" x:Name="SendMessageButton" Clicked="SendMessageButton_Clicked" TextColor="White"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

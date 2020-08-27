@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.PieShopViews.PieDetailView"
+             Padding="5"
+             BackgroundImage="patternwide.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".4*"></ColumnDefinition>
+            <ColumnDefinition Width=".6*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="PieNameLabel" 
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2" 
+               FontSize="Large" 
+               HorizontalTextAlignment="Center" 
+               VerticalTextAlignment="Center"></Label>
+        <Image x:Name="PieImage" 
+               Grid.Row="1" 
+               Grid.ColumnSpan="2" 
+               Margin="10" 
+               WidthRequest="200" 
+               HeightRequest="200" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"></Image>
+        <Label x:Name="PriceLabel" 
+               FontAttributes="Bold" 
+               Grid.Row="2"></Label>
+        <Label x:Name="InStockLabel" 
+               Grid.Row="2" 
+               Grid.Column="1" 
+               HorizontalOptions="End"></Label>
+        <Label x:Name="DescriptionLabel" 
+               FontSize="Small" 
+               Grid.Row="3" 
+               Grid.ColumnSpan="2"></Label>
+        <Button x:Name="AddToBasketButton" 
+                Clicked="AddToBasketButton_OnClicked" 
+                Text="Add to basket" 
+                HorizontalOptions="Center" 
+                VerticalOptions="Start" 
+                BackgroundColor="#22cfa7" 
+                Grid.Row="4" 
+                Grid.ColumnSpan="2" 
+                TextColor="White"></Button>
+    </Grid>
+</ContentPage>
