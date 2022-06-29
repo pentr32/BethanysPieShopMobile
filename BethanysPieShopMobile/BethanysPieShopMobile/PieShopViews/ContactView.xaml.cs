@@ -10,17 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace BethanysPieShopMobile.PieShopViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginView : ContentPage
+    public partial class ContactView : ContentPage
     {
-        public LoginView()
+        public ContactView()
         {
             InitializeComponent();
         }
 
-        private async void LoginButton_OnClicked(object sender, EventArgs e)
+        private void SendMessageButton_Clicked(object sender, EventArgs e)
         {
-            Navigation.InsertPageBefore(new MainView(), this);     // Brugeren er authentikeret
-            await Navigation.PopAsync();
+            DisplayAlert("Success", "Message sent successfully", "Done");
         }
     }
 }
