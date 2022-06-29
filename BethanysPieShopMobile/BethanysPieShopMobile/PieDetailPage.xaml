@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BethanysPieShopMobile.PieDetailPage"
+             Padding="5"
+             BackgroundImage="patternwide.png">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".4*"></ColumnDefinition>
+                <ColumnDefinition Width=".6*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="TitleLabel" 
+               Text="Edit pie"
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2" 
+               Style="{StaticResource TitleLabelStyle}"></Label>
+            <Image x:Name="PieImage" 
+               Grid.Column="0"
+               Grid.Row="1" 
+               Grid.ColumnSpan="2"
+               Source="{Binding ImageUrl}"
+               Margin="10" 
+               WidthRequest="200" 
+               HeightRequest="200" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"></Image>
+            <Label Text="Pie name" 
+               Grid.Row="2" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Entry Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding PieName, Mode=TwoWay}" 
+               Style="{StaticResource RegularEntry}"></Entry>
+            <Label Text="Price" 
+               Grid.Row="3" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Entry Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding Price, Mode=TwoWay}" 
+               Style="{StaticResource RegularEntry}"></Entry>
+            <Label Text="Description" 
+               Grid.Row="4" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Editor Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding Description, Mode=TwoWay}" 
+               Style="{StaticResource RegularEditorStyle}"></Editor>
+            <Label Text="In stock?" 
+               Grid.Row="5" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Switch Grid.Row="5"
+               Grid.Column="1"
+               IsToggled="{Binding InStock, Mode=TwoWay}"></Switch>
+            <Label Text="Available date" 
+               Grid.Row="6" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <DatePicker Grid.Row="6"
+                Grid.Column="1"
+                Date="{Binding AvailableFromDate, Mode=TwoWay}"></DatePicker>
+            <Button x:Name="SavePieButton" 
+                Clicked="SavePieButton_Clicked"
+                Text="Save Pie" 
+                Style="{StaticResource RegularButtonStyle}" 
+                Grid.Row="7" 
+                Grid.Column="0"
+                Grid.ColumnSpan="2"></Button>
+        </Grid>
+    </ScrollView>
+</ContentPage>
