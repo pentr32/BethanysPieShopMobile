@@ -36,5 +36,10 @@ namespace BethanysPieShopMobile
         {
             await this.Navigation.PushAsync(new Helpers.PieOverviewView());
         }
+
+        private async void btnCalc_Clicked(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new Helpers.Calculator());
+        }
     }
 }

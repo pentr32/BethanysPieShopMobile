@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.PieShopViews.ContactView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="bethanylogo.png" HeightRequest="100" Margin="10" HorizontalOptions="Center"></Image>
+            <Label Text="Send us a message" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+            <Editor x:Name="MessageEditor" HeightRequest="200" TextColor="Black" FontSize="Small" IsSpellCheckEnabled="True" MaxLength="500" >
+                <Editor.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>
+                                Suggestions,Spellcheck
+                            </KeyboardFlags>
+                        </x:Arguments>
+                    </Keyboard>
+                </Editor.Keyboard>
+                <Editor.BackgroundColor>
+                    <OnPlatform x:TypeArguments="Color">
+                        <On Platform="iOS" Value="#32c3ef" />
+                        <On Platform="Android" Value="#83d5c2" />
+                    </OnPlatform>
+                </Editor.BackgroundColor>
+            </Editor>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Should we contact you?"></Label>
+                <Switch x:Name="ContactMeSwitch"></Switch>
+            </StackLayout>
+            <Button Text="Send" x:Name="SendMessageButton" Clicked="SendMessageButton_Clicked" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

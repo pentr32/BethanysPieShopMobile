@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.Helpers.Calculator"
+             Title="Calculator - XAML">
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" ></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label BackgroundColor="Black" FontSize="Header" TextColor="White" Text="0" Grid.ColumnSpan="4" HorizontalTextAlignment="End" VerticalTextAlignment="End" ></Label>
+
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="LightGray" Text="C" FontSize="Large" Grid.Row="1" Grid.Column="0" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="LightGray" Text="+/-" FontSize="Large" Grid.Row="1" Grid.Column="1" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="LightGray" Text="%" FontSize="Large" Grid.Row="1" Grid.Column="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="Orange" Text="DIV" FontSize="Large" Grid.Row="1" Grid.Column="3" ></Button>
+
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="7" FontSize="Large" Grid.Row="2" Grid.Column="0" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="8" FontSize="Large" Grid.Row="2" Grid.Column="1" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="9" FontSize="Large" Grid.Row="2" Grid.Column="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="Orange" Text="X" FontSize="Large" Grid.Row="2" Grid.Column="3" ></Button>
+
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="4" FontSize="Large" Grid.Row="3" Grid.Column="0" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="5" FontSize="Large" Grid.Row="3" Grid.Column="1" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="6" FontSize="Large" Grid.Row="3" Grid.Column="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="Orange" Text="-" FontSize="Large" Grid.Row="3" Grid.Column="3" ></Button>
+
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="3" FontSize="Large" Grid.Row="4" Grid.Column="0" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="2" FontSize="Large" Grid.Row="4" Grid.Column="1" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="1" FontSize="Large" Grid.Row="4" Grid.Column="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="Orange" Text="+" FontSize="Large" Grid.Row="4" Grid.Column="3" ></Button>
+
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="0" FontSize="Large" Grid.Row="5" Grid.ColumnSpan="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="white" Text="." FontSize="Large" Grid.Row="5" Grid.Column="2" ></Button>
+            <Button BorderWidth="0.1" BorderColor="Black" BackgroundColor="Orange" Text="=" FontSize="Large" Grid.Row="5" Grid.Column="3" ></Button>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

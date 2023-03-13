@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BethanysPieShopMobile.PieShopViews.LoginView"
+             BackgroundImageSource="patternwide.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="RegularButtonStyle" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="#22cfa7" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <!--Row[0]-->
+            <Label Grid.Row="0" Grid.ColumnSpan="3" ></Label>
+            <!--Row[0]-->
+            
+            
+            <!--Row[1]-->
+            <Label Grid.Row="1" Grid.Column="0"></Label>
+            <Image Source="bethanylogo.jpg" Aspect="AspectFill" Grid.Row="1" Grid.Column="1"></Image>
+            <Label Grid.Row="1" Grid.Column="2" HorizontalOptions="End" ></Label>
+            <!--Row[1]-->
+
+            
+            <!--Row[2]-->
+            <Label Grid.Row="2" Grid.ColumnSpan="3" ></Label>
+            <!--Row[2]-->
+
+            
+            <!--Row[3]-->
+            <Label Grid.Row="3" Grid.ColumnSpan="3" Text="Welcome to Bethany's Pie Shop" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" ></Label>
+            <!--Row[3]-->
+
+            
+            <!--Row[4]-->
+            <Label Grid.Row="4" FontSize="Medium" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Text="User name"></Label>
+            <Entry Grid.Row="4" x:Name="UserNameEntry" Grid.Column="1" Placeholder="Enter your username" HorizontalOptions="End" VerticalOptions="Center" ></Entry>
+            <!--Row[4]-->
+
+            <!--Row[5]-->
+            <Label Grid.Row="5" FontSize="Medium" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" Text="Password"></Label>
+            <Entry Grid.Row="5" x:Name="PasswordEntry" IsPassword="True" Grid.Column="1" Placeholder="Enter your password" HorizontalOptions="End" VerticalOptions="Center" ></Entry>
+            <!--Row[5]-->
+
+            <!--Row[6]-->
+            <Label Grid.Row="6" Grid.Column="0"></Label>
+            <Button Grid.Row="6" Style="{StaticResource GreenButtonStyle}" x:Name="LoginButton" Clicked="LoginButton_OnClicked" Grid.Column="1" Text="LOGIN"></Button>
+            <!--Row[6]-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
